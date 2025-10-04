@@ -1,0 +1,35 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# FastAPI / Uvicorn temp files
+*.db
+*.sqlite3
+
+# Ollama or other LLM temp files
+*.jsonl
+*.cache
+
+# Ignore compiled schema/prompt outputs
+schemas/*.pyc
+prompts/*.tmp
+
+# Test outputs
+test_output.json

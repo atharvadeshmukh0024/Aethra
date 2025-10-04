@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": ["topic", "subject", "count", "difficulty", "user_info"],
+  "properties": {
+    "topic": {"type": "string"},
+    "subject": {"type": "string"},
+    "count": {"type": "integer", "minimum": 1, "maximum": 20},
+    "difficulty": {"type": "string", "enum": ["easy", "medium", "hard"]},
+    "user_info": {"type": "object"}
+  }
+}
