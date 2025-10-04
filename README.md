@@ -17,14 +17,22 @@ Backend Orchestrator functional with mock tools
 ## Project Structure
 
 Aethra/
-├─ services/
-│ └─ ai_logic.py # LLM parameter extraction & defaults
-├─ schemas/ # JSON schemas for each tool
-├─ prompts/ # Prompt templates for LLM
-├─ mocks/
-│ └─ mock_tools.py # Mock endpoints for all tools
-├─ main.py # FastAPI orchestrator backend
-├─ test_extract.py # LLM parameter extraction test
+   
+   ├─ services/
+   
+   │ └─ ai_logic.py # LLM parameter extraction & defaults
+
+   ├─ schemas/ # JSON schemas for each tool
+
+   ├─ prompts/ # Prompt templates for LLM
+
+   ├─ mocks/
+
+   │ └─ mock_tools.py # Mock endpoints for all tools
+
+   ├─ main.py # FastAPI orchestrator backend
+
+   ├─ test_extract.py # LLM parameter extraction test
 
 
 ## Checkpoint Status
