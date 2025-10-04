@@ -77,7 +77,7 @@ pip install fastapi uvicorn
 Navigate to the mocks directory: \Aethra\mocks
 
 Start the mock tools server:
-uvicorn mock_tools:mock_app --host 127.0.0.1 --port 9001 --reload
+python -m uvicorn mock_tools:mock_app --host 127.0.0.1 --port 9001 --reload
 
 Open the docs to verify endpoints:
 http://127.0.0.1:9001/docs
@@ -86,7 +86,7 @@ http://127.0.0.1:9001/docs
 Open a new terminal, navigate to the project root: \Aethra
 
 Run the orchestrator backend:
-uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 Open the docs to verify endpoints:
 http://127.0.0.1:8000/docs
