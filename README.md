@@ -66,8 +66,7 @@ Aethra/
 ### Setup Instructions
 
 # Clone the repository
-git clone "[https://github.com/atharvadeshmukh0024/Athera.git](https://github.com/atharvadeshmukh0024/Athera.git)"
-
+git clone "https://github.com/atharvadeshmukh0024/Aethra.git"
 cd Aethra
 
 # Install dependencies
