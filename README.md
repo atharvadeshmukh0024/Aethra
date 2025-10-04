@@ -1,18 +1,43 @@
-# AI Tutor Orchestrator – Checkpoint 1
+# 🧠Aethra – Orchestrating Limitless Learning with AI Agents
 
-## Project Status
-Backend Orchestrator functional with mock tools
+The **Adaptive AI Tutor Orchestrator** is a smart backend system that personalizes learning experiences using emotional and cognitive feedback.  
+It intelligently decides *how* to teach a concept - through flashcards, notes, or explanations - based on the student’s profile and emotional state.
 
-## Completed Features
-- Backend built using FastAPI with `/orchestrate` endpoint
-- Parameter extraction from student messages using local LLM (Ollama LLaMA 3.2)
-- Integration with three mock educational tools:
-  - Flashcard Generator
-  - Note Maker
-  - Concept Explainer
-- Personalized responses based on learning style and emotional state
-- Mastery tracking for each student and topic
-- Fully tested with sample messages, outputs verified
+---
+
+## 🚀 Project Overview
+
+This project aims to build an **AI-driven tutoring backend** that adapts dynamically to each learner.  
+The orchestrator acts as the brain - analyzing student input, understanding intent, and selecting the right educational tool.
+
+It also tracks **user mastery progress**, adjusts difficulty, and adds motivational personalization based on emotional state and learning style.  
+
+---
+
+## 🧩 Core Features
+
+- **Dynamic Tool Orchestration:** Automatically routes queries to the right educational tool  
+- **Emotion-Aware Adaptation:** Adjusts tone and pace depending on mood (confused, tired, focused)  
+- **Learning-Style Personalization:** Custom tips for visual, auditory, and other learners  
+- **Mastery Tracking:** Gradually updates user progress per topic  
+- **Mock Tools Integration:** Includes flashcard, note, and explanation generators for testing  
+- **FastAPI-Powered API:** Lightweight and fast backend for real-time orchestration  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend Framework:** FastAPI  
+- **Language:** Python 3.10+  
+- **AI Logic:** Local LLM (via Ollama) for parameter extraction  
+- **Libraries:** `httpx`, `pydantic`, `re`  
+- **Mock Tools:** Simulated APIs for flashcards, notes, and explanations  
+
+---
+
+## 📂 Project Structure
+
+
 
 ## Project Structure
 
@@ -20,27 +45,21 @@ Aethra/
    
    ├─ services/
    
-   │ └─ ai_logic.py # LLM parameter extraction & defaults
+   │ └─ ai_logic.py            # LLM parameter extraction & defaults
 
-   ├─ schemas/ # JSON schemas for each tool
+   ├─ schemas/                 # JSON schemas for each tool
 
-   ├─ prompts/ # Prompt templates for LLM
+   ├─ prompts/                 # Prompt templates for LLM
 
    ├─ mocks/
 
-   │ └─ mock_tools.py # Mock endpoints for all tools
+   │ └─ mock_tools.py          # Mock endpoints for all tools
 
-   ├─ main.py # FastAPI orchestrator backend
+   ├─ main.py                  # FastAPI orchestrator backend
 
-   ├─ test_extract.py # LLM parameter extraction test
+   ├─ test_extract.py          # LLM parameter extraction test
 
-
-## Checkpoint Status
-- Backend orchestration logic: Completed
-- Tool integration with LLM: Completed (using mocks)
-- Personalization & mastery tracking: Completed
-
-
+---
 
 ## Testing the Orchestrator
 
@@ -102,3 +121,34 @@ POST http://127.0.0.1:8000/orchestrate
   },
   "updated_mastery": 1
 }
+
+
+# 📊 Check Mastery State
+
+You can view how the system tracks progress using:
+
+GET http://127.0.0.1:8000/state
+
+
+### Example Output:
+json
+{
+  "Alex": {
+    "derivatives": 1.0
+  }
+}
+
+
+---
+
+
+👨‍💻 **Contributors**
+
+- Team Members : Atharva Deshmukh, Prajwal Konde, Nakshatra Deshmukh
+
+---
+
+🏆 **Summary**
+
+This project shows how an AI system can move beyond static answers and truly adapt to human learning behavior - changing tone, pacing, and teaching style dynamically.  
+It’s a step toward emotionally intelligent digital tutoring for the next generation of learners.
