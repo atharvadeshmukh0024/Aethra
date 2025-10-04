@@ -38,9 +38,6 @@ It also tracks **user mastery progress**, adjusts difficulty, and adds motivatio
 ## 📂 Project Structure
 
 
-
-## Project Structure
-
 Aethra/
    
    ├─ services/
@@ -193,7 +190,19 @@ json
 
 
 ---
+## Screenshots 📸
 
+![](https://github.com/atharvadeshmukh0024/Aethra/blob/main/Screenshot%202025-10-05%20011110.png)
+*Request*
+
+![](https://github.com/atharvadeshmukh0024/Aethra/blob/main/Screenshot%202025-10-05%20011124.png)  
+*Response*
+
+![](https://github.com/atharvadeshmukh0024/Aethra/blob/main/Screenshot%202025-10-05%20011230.png)  
+*Mastery State*
+
+
+---
 
 👨‍💻 **Contributors**
 
