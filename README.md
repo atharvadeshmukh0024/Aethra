@@ -102,14 +102,23 @@ POST http://127.0.0.1:8000/docs
 
 # Body (JSON):
 {
-  "message": "Create 5 flashcards on derivatives",
+
+  "message": "Give me 5 flashcards on derivatives",
+  
   "user_profile": {
+  
     "name": "Alex",
+    
     "learning_style": "visual",
+    
     "mastery_level": 3,
+    
     "emotional_state": "confused"
+    
   }
+  
 }
+
 
 3. Click Execute.
 
@@ -117,29 +126,53 @@ POST http://127.0.0.1:8000/docs
    
 # Sample Response:
 {
+
   "tool": "flashcard_generator",
+  
   "params": {
+  
     "topic": "derivatives",
+    
     "count": 5
+    
   },
+  
   "tool_response": {
+  
     "tool": "flashcard_generator",
+    
     "flashcards": [
+    
       "Q1: derivatives?",
+      
       "Q2: derivatives?",
+      
       "Q3: derivatives?",
+      
       "Q4: derivatives?",
+      
       "Q5: derivatives?"
+      
     ]
+    
   },
+  
   "formatted": "🤔 Don't worry, let me simplify: Here are your flashcards:\nQ1: derivatives?\nQ2: derivatives?\nQ3: derivatives?\nQ4: derivatives?\nQ5: derivatives?\n💡 (Tip: Try drawing a diagram for better understanding!)",
+  
   "user_profile": {
+  
     "name": "Alex",
+    
     "learning_style": "visual",
+    
     "mastery_level": 3,
+    
     "emotional_state": "confused"
+    
   },
-  "updated_mastery": 1.5
+  
+  "updated_mastery": 1
+  
 }
 
 
