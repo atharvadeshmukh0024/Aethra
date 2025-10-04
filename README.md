@@ -69,31 +69,51 @@ Aethra/
 git clone "https://github.com/atharvadeshmukh0024/Aethra.git"
 cd Aethra
 
-# Install dependencies
-pip install fastapi uvicorn httpx pydantic jsonschema requests
+# Install Required Packages
+pip install fastapi uvicorn
 
 # Start mock tools server
+Navigate to the mocks directory: \Aethra\mocks
+
+Start the mock tools server:
 uvicorn mock_tools:mock_app --host 127.0.0.1 --port 9001 --reload
 
+Open the docs to verify endpoints:
+http://127.0.0.1:9001/docs
+
 # Start orchestrator backend
+Open a new terminal, navigate to the project root: \Aethra
+
+Run the orchestrator backend:
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+
+Open the docs to verify endpoints:
+http://127.0.0.1:8000/docs
 
 ### Test Orchestrator
 
 # Use Postman, curl, or any HTTP client to POST to:
-POST http://127.0.0.1:8000/orchestrate
+POST http://127.0.0.1:8000/docs
+
+1. Go to POST /orchestrate 
+
+2. Enter sample JSON:
 
 # Body (JSON):
 {
-    "message": "Give me 5 flashcards on derivatives",
-    "user_profile": {
-        "name": "Alex",
-        "learning_style": "visual",
-        "mastery_level": 3,
-        "emotional_state": "confused"
-    }
+  "message": "Create 5 flashcards on derivatives",
+  "user_profile": {
+    "name": "Alex",
+    "learning_style": "visual",
+    "mastery_level": 3,
+    "emotional_state": "confused"
+  }
 }
 
+3. Click Execute.
+
+4. Verify response contains:
+   
 # Sample Response:
 {
   "tool": "flashcard_generator",
@@ -111,14 +131,14 @@ POST http://127.0.0.1:8000/orchestrate
       "Q5: derivatives?"
     ]
   },
-  "formatted": "Don't worry, let me simplify: Here are your flashcards:\nQ1: derivatives?\nQ2: derivatives?\nQ3: derivatives?\nQ4: derivatives?\nQ5: derivatives?\n(Tip: Try drawing a diagram for better understanding!)",
+  "formatted": "🤔 Don't worry, let me simplify: Here are your flashcards:\nQ1: derivatives?\nQ2: derivatives?\nQ3: derivatives?\nQ4: derivatives?\nQ5: derivatives?\n💡 (Tip: Try drawing a diagram for better understanding!)",
   "user_profile": {
     "name": "Alex",
     "learning_style": "visual",
     "mastery_level": 3,
     "emotional_state": "confused"
   },
-  "updated_mastery": 1
+  "updated_mastery": 1.5
 }
 
 
